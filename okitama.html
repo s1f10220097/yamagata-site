@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>置賜地方</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="okitama.css">
+</head>
+<body>
+    <header>
+        <h1>置賜地域</h1>
+        <nav>
+            <ul class="dropdown-menu">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">トップページ</a>
+                    <ul class="submenu">
+                        <li><a href="index.html#map-weather">山形県のマップと天気</a></li>
+                        <li><a href="index.html#yamagata-overview">山形県の概要</a></li>
+                        <li><a href="index.html#history">山形県の歴史</a></li>
+                        <li><a href="index.html#no1">山形県の日本一</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">地域紹介</a>
+                    <ul class="submenu">
+                        <li><a href="murayama.html">村山地域</a></li>
+                        <li><a href="okitama.html">置賜地域</a></li>
+                        <li><a href="syounai.html">庄内地域</a></li>
+                        <li><a href="mogami.html">最上地域</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Map and Description Section -->
+        <section class="map-section">
+            <div class="map-container">
+                <img src="./images/置賜マップ.gif" alt="置賜地域のマップ">
+            </div>
+            <div class="description-container">
+                <h2>置賜地域の魅力</h2>
+                <p>置賜地域は山形県の南部に位置し、歴史ある米沢城下町や全国的に有名な米沢牛、美しい温泉地など、多彩な魅力が詰まったエリアです。果物の栽培も盛んで、四季折々の自然や伝統文化を楽しめます。</p>
+            </div>
+            <div class="geography-description">
+                <h2>置賜地域の地形</h2>
+                <p>置賜地域は東西を奥羽山脈と朝日山地に囲まれた盆地地形が特徴で、中央を最上川が流れ、豊かな自然と肥沃な農地が広がっています。</p>
+            </div>
+        </section>
+
+        <!-- Sliders Section -->
+        <section class="slider-section">
+            <h2>名産品</h2>
+            <div class="slider-wrapper">
+                <button class="slider-btn prev">&#10094;</button>
+                <div class="slider" id="product-slider">
+                    <div class="slider-item">
+                        <img src="./images/米沢牛.jpg" alt="名産品1" data-description="三大和牛の1つとされるブランド牛。置賜地方、特に米沢市で肥育され、長期肥育による脂のおいしさが特長である。">
+                        <p>米沢牛</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/ワイン.jpg" alt="名産品2" data-description="高畠町がワインの4大産地の1つで、高畠ワイナリーが有名。寒暖差が産んだ良いぶどうから作られる絶品のワインが生産される。">
+                        <p>ワイン</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/龍上海.jpg" alt="名産品3" data-description="米沢ラーメン、赤湯ラーメンが有名。赤湯ラーメン「龍上海」は2時間は並ぶほど人気でまじで美味しい。">
+                        <p>ラーメン</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/りんご.jpg" alt="名産品4" data-description="米沢市の館山りんごが有名。実が堅く、香り高く、濃縮されたような甘酸っぱさが特徴。">
+                        <p>りんご</p>
+                    </div>
+                </div>
+                <button class="slider-btn next">&#10095;</button>
+            </div>
+        
+            <h2>観光名所</h2>
+            <div class="slider-wrapper">
+                <button class="slider-btn prev">&#10094;</button>
+                <div class="slider" id="attraction-slider">
+                    <div class="slider-item">
+                        <img src="./images/赤湯温泉.jpg" alt="観光名所1" data-description="3つの源泉があり、平安時代後期から続く温泉。兵士が戦いで傷ついた体を湯に浸したところ、たちどころに傷が治り、血で真っ赤に染まったことが赤湯温泉の由来となったと言われている。">
+                        <p>赤湯温泉/南陽市</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/熊野大社.jpg" alt="観光名所2" data-description="東北の伊勢とも言われ、日本三熊野の一つに数えられる。縁結びで有名な山形県内有数のパワースポット。">
+                        <p>熊野大社/南陽市</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/上杉神社.jpg" alt="観光名所3" data-description="上杉謙信が祀られている。開運招福や諸願成就、さらには学業成就や商売繁盛のご利益もあるとされるパワースポット。">
+                        <p>上杉神社/米沢市</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/亀岡文殊.jpg" alt="観光名所4" data-description="日本三文殊の1つ。受験合格祈願はもちろん願望達成、商売繁盛などにも御利益があると言われている。">
+                        <p>亀岡文殊/高畠町</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/白川ダム.jpg" alt="観光名所5" data-description="水没林が有名で、白川湖カヌーが体験できる。">
+                        <p>白川ダム/飯豊町</p>
+                    </div>
+                </div>
+                <button class="slider-btn next">&#10095;</button>
+            </div>
+        
+            <!-- モーダルウィンドウ -->
+            <div id="imageModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImage">
+                <div id="modalDescription" class="modal-description"></div>
+            </div>
+        </section>
+        
+    </main>
+
+    <script>
+        const sliders = document.querySelectorAll('.slider');
+
+        sliders.forEach(slider => {
+            const prevBtn = slider.parentElement.querySelector('.prev');
+            const nextBtn = slider.parentElement.querySelector('.next');
+            const items = slider.querySelectorAll('.slider-item');
+
+            let currentIndex = 0;
+            const showItems = () => {
+                items.forEach((item, index) => {
+                    item.style.display = index >= currentIndex && index < currentIndex + 3 ? 'block' : 'none';
+                });
+            };
+
+            showItems();
+
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + items.length) % items.length;
+                showItems();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % items.length;
+                showItems();
+            });
+        });
+    </script>
+    <script src="./okitama.js"></script>
+</body>
+</html>

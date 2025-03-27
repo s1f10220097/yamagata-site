@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>庄内地方</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="syounai.css">
+</head>
+<body>
+    <header>
+        <h1>庄内地域</h1>
+        <nav>
+            <ul class="dropdown-menu">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">トップページ</a>
+                    <ul class="submenu">
+                        <li><a href="index.html#map-weather">山形県のマップと天気</a></li>
+                        <li><a href="index.html#yamagata-overview">山形県の概要</a></li>
+                        <li><a href="index.html#history">山形県の歴史</a></li>
+                        <li><a href="index.html#no1">山形県の日本一</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">地域紹介</a>
+                    <ul class="submenu">
+                        <li><a href="murayama.html">村山地域</a></li>
+                        <li><a href="okitama.html">置賜地域</a></li>
+                        <li><a href="syounai.html">庄内地域</a></li>
+                        <li><a href="mogami.html">最上地域</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Map and Description Section -->
+        <section class="map-section">
+            <div class="map-container">
+                <img src="./images/庄内マップ.gif" alt="庄内地域のマップ">
+            </div>
+            <div class="description-container">
+                <h2>庄内地域の魅力</h2>
+                <p>庄内地域は日本海に面し、出羽三山や酒田の港町、新鮮な海の幸など、自然と歴史、食が楽しめるエリアです。庄内米や農産物も全国的に評価されています。</p>
+            </div>
+            <div class="geography-description">
+                <h2>庄内地域の地形</h2>
+                <p>庄内地域は広大な庄内平野と日本海沿岸が特徴で、最上川が流れ、月山や鳥海山などの山々が周囲に広がっています。</p>
+            </div>
+        </section>
+
+        <!-- Sliders Section -->
+        <section class="slider-section">
+            <h2>名産品</h2>
+            <div class="slider-wrapper">
+                <button class="slider-btn prev">&#10094;</button>
+                <div class="slider" id="product-slider">
+                    <div class="slider-item">
+                        <img src="./images/庄内柿.jpg" alt="名産品1" data-description="山形県庄内地方で栽培される柿のブランド名で、種なしの渋柿の一種。代表的な品種は「平核無（ひらたねなし）」">
+                        <p>庄内柿</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/地酒.jpg" alt="名産品2" data-description="初孫や出羽桜など有名な日本酒が製造されている。県内で最も多くの酒造を有する。">
+                        <p>地酒</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/庄内豚.jpg" alt="名産品3" data-description="山形県庄内地方で養殖されている。庄内平野は米どころで平地が広いため、豚舎や農場を整備しやすく、豚を育てる環境に恵まれている。">
+                        <p></p>庄内豚
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/米.jpg" alt="名産品4" data-description="庄内地方は日本有数の米どころとして知られている。つや姫やはえぬきなどの代表的な米も庄内平野で作られている。">
+                        <p>米</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/だだちゃ豆.jpg" alt="名産品5" data-description="鶴岡市の在来野菜で、いわゆる茶豆の一種。くびれた小ぶりなサヤに茶色の産毛が生えた、甘みと香りの強さが特徴的な枝豆。">
+                        <p>だだちゃ豆</p>
+                    </div>
+                </div>
+                <button class="slider-btn next">&#10095;</button>
+            </div>
+        
+            <h2>観光名所</h2>
+            <div class="slider-wrapper">
+                <button class="slider-btn prev">&#10094;</button>
+                <div class="slider" id="attraction-slider">
+                    <div class="slider-item">
+                        <img src="./images/羽黒山五重塔.jpg" alt="観光名所1" data-description="羽黒山参道の杉並木にある五重塔。高さ約29m、3間5層柿葺素木造の塔は東北最古といわれる。">
+                        <p>羽黒山五重塔/鶴岡市</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/月山神社.jpg" alt="観光名所2" data-description="出羽三山神社とも呼ばれ、月山の山頂（1,984m）に鎮座する神社である。羽黒山・月山・湯殿山を「出羽三山」と総称する。">
+                        <p>月山神社/鶴岡市</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/湯野浜温泉.jpg" alt="観光名所3" data-description="「湯野浜温泉」「あつみ温泉」「湯田川温泉」 「由良温泉」の四温泉は、美しい海岸沿いや静かな山あいにある名湯である。">
+                        <p>温泉/鶴岡市</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/日和山公園.jpg" alt="観光名所4" data-description="市内中心部の旧北上川河口に位置する丘陵地で、桜の名所としても知られる。">
+                        <p>日和山公園/酒田市</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/鶴岡公園.jpg" alt="観光名所5" data-description="鶴ヶ岡城の跡地である。日本さくら名所100選、また日本の歴史公園100選にも選定されている。">
+                        <p>鶴岡公園/鶴岡市</p>
+                    </div>
+                </div>
+                <button class="slider-btn next">&#10095;</button>
+            </div>
+        
+            <!-- モーダルウィンドウ -->
+            <div id="imageModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImage">
+                <div id="modalDescription" class="modal-description"></div>
+            </div>
+        </section>
+        
+    </main>
+
+    <script>
+        const sliders = document.querySelectorAll('.slider');
+
+        sliders.forEach(slider => {
+            const prevBtn = slider.parentElement.querySelector('.prev');
+            const nextBtn = slider.parentElement.querySelector('.next');
+            const items = slider.querySelectorAll('.slider-item');
+
+            let currentIndex = 0;
+            const showItems = () => {
+                items.forEach((item, index) => {
+                    item.style.display = index >= currentIndex && index < currentIndex + 3 ? 'block' : 'none';
+                });
+            };
+
+            showItems();
+
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + items.length) % items.length;
+                showItems();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % items.length;
+                showItems();
+            });
+        });
+    </script>
+    <script src="./syounai.js"></script>
+</body>
+</html>

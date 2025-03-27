@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>村山地域</title>
+    <link rel="stylesheet" href="murayama.css">
+    <script src="murayama.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>村山地域</h1>
+        <nav>
+            <ul class="dropdown-menu">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">トップページ</a>
+                    <ul class="submenu">
+                        <li><a href="index.html#map-weather">山形県のマップと天気</a></li>
+                        <li><a href="index.html#yamagata-overview">山形県の概要</a></li>
+                        <li><a href="index.html#history">山形県の歴史</a></li>
+                        <li><a href="index.html#no1">山形県の日本一</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">地域紹介</a>
+                    <ul class="submenu">
+                        <li><a href="murayama.html">村山地域</a></li>
+                        <li><a href="okitama.html">置賜地域</a></li>
+                        <li><a href="syounai.html">庄内地域</a></li>
+                        <li><a href="mogami.html">最上地域</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Map and Description Section -->
+        <section class="map-section">
+            <div class="map-container">
+                <img src="./images/村山マップ.gif" alt="村山地域のマップ">
+            </div>
+            <div class="description-container">
+                <h2>村山地域の魅力</h2>
+                <p>村山地域は山形県の中心部に位置し、豊かな自然と歴史的な名所が数多くあります。特産品としてはさくらんぼやラ・フランスが有名で、美しい四季折々の風景が楽しめる温泉地も点在しています。</p>
+            </div>
+            <div class="geography-description">
+                <h2>村山地域の地形</h2>
+                <p>村山地域は山形盆地の広がりが特徴で、東西には美しい山々が連なり、緑豊かな自然に囲まれています。最上川が地域を縦断し、農業や水運の発展を支えてきました。</p>
+            </div>
+        </section>
+
+        <!-- Sliders Section -->
+        <section class="slider-section">
+            <h2>名産品</h2>
+            <div class="slider-wrapper">
+                <button class="slider-btn prev">&#10094;</button>
+                <div class="slider" id="product-slider">
+                    <div class="slider-item">
+                        <img src="./images/尾花沢スイカ.jpg" alt="名産品1" data-description="山形県尾花沢市で栽培されるスイカ。尾花沢市は山々に囲まれた盆地に位置するためスイカ栽培に適しており、糖度がとても高い。">
+                        <p>尾花沢スイカ</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/さくらんぼ.jpg" alt="名産品2" data-description="東根市、天童市、寒河江市で主に栽培されている。佐藤錦が代表的だが、紅秀峰や紅さやかなど約30種類が作付されている。">
+                        <p>さくらんぼ</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/ラフランス.jpg" alt="名産品3" data-description="天童市で主に栽培されている。日本の生産量の約8割を占めており、山形県を代表する果物の1つである。">
+                        <p>ラフランス</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/山形赤根ほうれんそう.jpg" alt="名産品4" data-description="山形市周辺で栽培されている根や葉の付け根が赤いほうれんそう。軟らかくてあくが少なく甘みがあるのが特徴。">
+                        <p>山形赤根ほうれんそう</p>
+                    </div>
+                </div>
+                <button class="slider-btn next">&#10095;</button>
+            </div>
+        
+            <h2>観光名所</h2>
+            <div class="slider-wrapper">
+                <button class="slider-btn prev">&#10094;</button>
+                <div class="slider" id="attraction-slider">
+                    <div class="slider-item">
+                        <img src="./images/蔵王温泉.jpg" alt="観光名所1" data-description="豊富な湯量と強酸性の硫黄泉で、殺菌作用や皮膚を強くする効果があることから、「美肌の湯」として知られている。">
+                        <p>蔵王温泉/山形市</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/山寺.jpg" alt="観光名所2" data-description="松尾芭蕉が有名な俳句「閑さや岩にしみ入る蝉の声」を残したことで知られている。1015段の長い石段がある。">
+                        <p>立石寺(山寺)/山形市</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/霞城公園.jpg" alt="観光名所3" data-description="山形市中心部に位置し、国指定史跡である山形城跡を整備して作られた都市公園。市内随一の桜の名所でもある。">
+                        <p>霞城公園/山形市</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/銀山温泉.jpg" alt="観光名所4" data-description="銀山川の両岸に木造の温泉旅館が立ち並び、タイムスリップしたかのようなレトロな景色が広がる温泉街。「千と千尋の神隠し」の舞台としても知られている。">
+                        <p>銀山温泉/尾花沢市</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/東沢バラ公園.jpg" alt="観光名所5" data-description="世界中から集められた約750品種、2万株のバラが咲き誇り、6月と9月にはバラ祭りが開催される。">
+                        <p>東沢バラ公園/尾花沢市</p>
+                    </div>
+                </div>
+                <button class="slider-btn next">&#10095;</button>
+            </div>
+        
+            <!-- モーダルウィンドウ -->
+            <div id="imageModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImage">
+                <div id="modalDescription" class="modal-description"></div>
+            </div>
+        </section>
+        
+    </main>
+
+    <script>
+        const sliders = document.querySelectorAll('.slider');
+
+        sliders.forEach(slider => {
+            const prevBtn = slider.parentElement.querySelector('.prev');
+            const nextBtn = slider.parentElement.querySelector('.next');
+            const items = slider.querySelectorAll('.slider-item');
+
+            let currentIndex = 0;
+            const showItems = () => {
+                items.forEach((item, index) => {
+                    item.style.display = index >= currentIndex && index < currentIndex + 3 ? 'block' : 'none';
+                });
+            };
+
+            showItems();
+
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + items.length) % items.length;
+                showItems();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % items.length;
+                showItems();
+            });
+        });
+    </script>
+    <script src="./murayama.js"></script>
+</body>
+</html>

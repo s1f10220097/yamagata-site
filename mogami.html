@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>最上地方</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mogami.css">
+</head>
+<body>
+    <header>
+        <h1>最上地域</h1>
+        <nav>
+            <ul class="dropdown-menu">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">トップページ</a>
+                    <ul class="submenu">
+                        <li><a href="index.html#map-weather">山形県のマップと天気</a></li>
+                        <li><a href="index.html#yamagata-overview">山形県の概要</a></li>
+                        <li><a href="index.html#history">山形県の歴史</a></li>
+                        <li><a href="index.html#no1">山形県の日本一</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">地域紹介</a>
+                    <ul class="submenu">
+                        <li><a href="murayama.html">村山地域</a></li>
+                        <li><a href="okitama.html">置賜地域</a></li>
+                        <li><a href="syounai.html">庄内地域</a></li>
+                        <li><a href="mogami.html">最上地域</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Map and Description Section -->
+        <section class="map-section">
+            <div class="map-container">
+                <img src="./images/最上マップ.gif" alt="最上地域のマップ">
+            </div>
+            <div class="description-container">
+                <h2>最上地域の魅力</h2>
+                <p>最上地域は最上川舟下りや豊富な温泉地、山菜やキノコなど自然の恵みが楽しめるエリアです。</p>
+            </div>
+            <div class="geography-description">
+                <h2>最上地域の地形</h2>
+                <p>最上地域は山形県の北部を占め、最上川が地域を縦断し、広がる渓谷美が特徴です。周囲は出羽山地に囲まれ、森林資源が豊富で、自然に恵まれた地形となっています。</p>
+            </div>
+        </section>
+
+        <!-- Sliders Section -->
+        <section class="slider-section">
+            <h2>名産品</h2>
+            <div class="slider-wrapper">
+                <button class="slider-btn prev">&#10094;</button>
+                <div class="slider" id="product-slider">
+                    <div class="slider-item">
+                        <img src="./images/そば.jpg" alt="名産品1" data-description="蕎麦生産の盛んな最上町のそば「最上早生（もがみわせ）」。冷涼な気候と清らかな水によって育まれたそばは、風味豊かで香り高く、打つと鮮やかな緑色が際立つ。">
+                        <p>そば</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/アスパラガス.jpg" alt="名産品2" data-description="米に代わる作物として町を上げて栽培に取り組み、今では町の特産品になっている。">
+                        <p></p>アスパラガス
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/ヤーコン.jpg" alt="名産品3" data-description="さつまいものような見た目と甘くてシャキシャキとした歯ざわりが特徴の野菜。「ヤーコン焼酎」は、クセがなくフルーティな飲み口で、焼酎が苦手な人も楽しめる。">
+                        <p>ヤーコン</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/最上赤にんにく.jpg" alt="名産品4" data-description="古くから最上地域の農家それぞれで自家採種され、大切に受け継がれてきた。一般的なにんにくと比べて大粒な見た目が特徴。">
+                        <p>最上赤にんにく</p>
+                    </div>
+                </div>
+                <button class="slider-btn next">&#10095;</button>
+            </div>
+        
+            <h2>観光名所</h2>
+            <div class="slider-wrapper">
+                <button class="slider-btn prev">&#10094;</button>
+                <div class="slider" id="attraction-slider">
+                    <div class="slider-item">
+                        <img src="./images/瀬見温泉.jpg" alt="観光名所1" data-description="山形県を訪問する歴代の天皇・皇后が何度も宿泊したことがある'定宿'のような温泉。">
+                        <p>瀬見温泉/最上町</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/赤倉温泉.jpg" alt="観光名所2" data-description="小国川沿いに位置する温泉街で、周辺には赤倉温泉スキー場が存在する。">
+                        <p>赤倉温泉/最上町</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/最上川.jpg" alt="観光名所3" data-description="最上川舟下りができる。">
+                        <p>最上川/戸沢村</p>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./images/仙人堂.jpg" alt="観光名所4" data-description="船でしか行けない神社として有名で、たくさんの伝説があるパワースポット。源義経や松尾芭蕉の歴史が刻まれている。">
+                        <p>仙人堂/戸沢村</p>
+                    </div>
+                </div>
+                <button class="slider-btn next">&#10095;</button>
+            </div>
+        
+            <!-- モーダルウィンドウ -->
+            <div id="imageModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImage">
+                <div id="modalDescription" class="modal-description"></div>
+            </div>
+        </section>
+        
+    </main>
+
+    <script>
+        const sliders = document.querySelectorAll('.slider');
+
+        sliders.forEach(slider => {
+            const prevBtn = slider.parentElement.querySelector('.prev');
+            const nextBtn = slider.parentElement.querySelector('.next');
+            const items = slider.querySelectorAll('.slider-item');
+
+            let currentIndex = 0;
+            const showItems = () => {
+                items.forEach((item, index) => {
+                    item.style.display = index >= currentIndex && index < currentIndex + 3 ? 'block' : 'none';
+                });
+            };
+
+            showItems();
+
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + items.length) % items.length;
+                showItems();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % items.length;
+                showItems();
+            });
+        });
+    </script>
+    <script src="./mogami.js"></script>
+</body>
+</html>

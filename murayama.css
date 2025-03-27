@@ -1,0 +1,270 @@
+/* 全体のスタイル */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* ヘッダー */
+header {
+    background-color: #228B22;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-align: center; /* タイトルを中央揃えに設定 */
+}
+
+/* ドロップダウンメニュー */
+.dropdown-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #228B22;
+}
+
+.dropdown-menu > li {
+    position: relative;
+}
+
+.dropdown-menu > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s; /* 背景色の変化をスムーズにする */
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: #1e6e1e; /* カーソルを合わせたときに濃い緑 */
+}
+
+.submenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    display: none;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submenu > li > a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    white-space: nowrap;
+    transition: background-color 0.3s; /* 背景色の変化をスムーズにする */
+}
+
+.submenu > li > a:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+main {
+    padding: 2rem;
+}
+
+.map-section {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: flex-start;
+}
+
+.map-container {
+    flex: 1;
+    max-width: 40%;
+}
+
+.map-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.description-container {
+    flex: 1;
+    max-width: 50%;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.description-container h2 {
+    margin-top: 0;
+    color: #4caf50;
+}
+
+.description-container p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.geography-description {
+    flex: 1;
+    max-width: 50%;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.geography-description h2 {
+    margin-top: 0;
+    color: #4caf50;
+}
+
+.geography-description p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.slider-section {
+    margin-top: 2rem;
+}
+
+.slider-section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #4caf50;
+}
+
+.slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider-item {
+    flex: 0 0 33%;
+    max-width: 33%;
+    text-align: center;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.slider-item p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.slider-btn.prev {
+    left: 10px;
+}
+
+.slider-btn.next {
+    right: 10px;
+}
+
+.slider-btn:hover {
+    background-color: #4caf50;
+}
+
+/* 各写真のコンテナ */
+.slider-item img {
+    width: 100%; /* コンテナ幅に合わせる */
+    height: auto; /* 縦横比を維持 */
+    object-fit: cover;
+    border: 2px solid #ddd; /* 境界線を追加 */
+    border-radius: 5px; /* 角を丸める */
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s; /* ホバー時のアニメーション */
+}
+
+/* ホバー時の拡大効果 */
+.slider-item img:hover {
+    transform: scale(1.05); /* 画像を拡大 */
+    border-color: #2d6a4f; /* 境界線の色を変更 */
+}
+
+/* モーダルウィンドウのスタイル */
+.modal {
+    display: none; /* 初期状態では非表示 */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* 背景を暗くする */
+}
+
+.modal-content {
+    margin: 10% auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    border: 4px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.modal-description {
+    color: white;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #f00;
+    text-decoration: none;
+    cursor: pointer;
+}

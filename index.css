@@ -1,0 +1,352 @@
+/* 基本スタイル */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* ヘッダー */
+header {
+    background-color: #228B22;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-align: center; /* タイトルを中央揃えに設定 */
+}
+
+/* ドロップダウンメニュー */
+.dropdown-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #228B22;
+}
+
+.dropdown-menu > li {
+    position: relative;
+}
+
+.dropdown-menu > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s; /* 背景色の変化をスムーズにする */
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: #1e6e1e; /* カーソルを合わせたときに濃い緑 */
+}
+
+.submenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    display: none;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submenu > li > a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    white-space: nowrap;
+    transition: background-color 0.3s; /* 背景色の変化をスムーズにする */
+}
+
+.submenu > li > a:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+/* h2 見出しのデザイン */
+h2 {
+    background: linear-gradient(90deg, #d4edda, #a3d6a7); /* 緑系のグラデーション */
+    padding: 12px;
+    border-left: 8px solid #228B22; /* 濃い緑のアクセント */
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #1b5e20; /* 深い緑 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 天気表示のデザイン */
+#map-weather-container {
+    display: flex; /* 横並びにする */
+    gap: 20px; /* マップと天気の間の間隔を設定 */
+    align-items: flex-start; /* 天気情報がマップの上端に揃うようにする */
+}
+
+#map img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc; /* 境界線を追加 */
+    border-radius: 8px; /* 角を丸める */
+}
+
+#weather-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* 各天気項目の間隔を狭く設定 */
+    background-color: #f5f5f5;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.weather-item {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2; /* 行間を狭く設定 */
+}
+
+/* 地方名の色分けと黒縁 */
+.weather-item h3 {
+    margin: 0;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* 黒の縁取り */
+}
+
+.weather-item:nth-child(1) h3 { color: yellow; } /* 村山地方 */
+.weather-item:nth-child(2) h3 { color: pink; } /* 置賜地方 */
+.weather-item:nth-child(3) h3 { color: lightblue; } /* 庄内地方 */
+.weather-item:nth-child(4) h3 { color: lightgreen; } /* 最上地方 */
+
+/* 概要の表スタイル */
+.overview-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #ffffff;
+}
+
+.overview-table th, .overview-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.overview-table th {
+    background-color: #2d6a4f;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.overview-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.overview-table tr:hover {
+    background-color: #e8f5e9;
+}
+
+/* 写真を横並びにするスタイル */
+.images-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* 各写真のコンテナ */
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 18%; /* 写真の幅を調整 */
+}
+
+/* 写真のスタイル */
+.image-container img {
+    width: 100%; /* コンテナ幅に合わせる */
+    height: auto; /* 縦横比を維持 */
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+/* ホバー時の拡大効果 */
+.image-container img:hover {
+    transform: scale(1.05);
+    border-color: #2d6a4f;
+}
+
+/* キャプションのスタイル */
+.image-caption {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* モーダルウィンドウのスタイル */
+.modal {
+    display: none; /* 初期状態では非表示 */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* 背景を暗くする */
+}
+
+.modal-content {
+    margin: 10% auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    border: 4px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #f00;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 年表セクション全体のスタイル */
+.history-section {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 90%;
+}
+
+/* 年表のテーブルスタイル */
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ヘッダーのスタイル */
+.history-table thead {
+    background-color: #2d6a4f;
+    color: #fff;
+}
+
+.history-table th {
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* ボディのスタイル */
+.history-table td {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* 偶数行の背景色 */
+.history-table tbody tr:nth-child(even) {
+    background-color: #f1f8e9;
+}
+
+/* ホバー時の行の強調 */
+.history-table tbody tr:hover {
+    background-color: #d4e9c4;
+    transition: background-color 0.3s;
+}
+
+/* 山形県の日本一セクション */
+#no1 {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#no1 h2 {
+    background: linear-gradient(90deg, #d4edda, #a3d6a7); /* 緑系のグラデーション */
+    padding: 12px;
+    border-left: 8px solid #228B22; /* 濃い緑のアクセント */
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #1b5e20; /* 深い緑 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#no1 .no1-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+#no1 .no1-list li {
+    background-color: white;
+    border: 2px solid #2e8b57;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#no1 .no1-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+#no1 .no1-list li span {
+    font-weight: bold;
+    color: #2e8b57;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#no1 .no1-list li p {
+    color: #333;
+    font-size: 1em;
+    margin: 0;
+    line-height: 1.5;
+}

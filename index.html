@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>山形県観光サイト</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>山形県観光サイト</h1>
+        <nav>
+            <ul class="dropdown-menu">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">トップページ</a>
+                    <ul class="submenu">
+                        <li><a href="#map-weather">山形県のマップと天気</a></li>
+                        <li><a href="#yamagata-overview">山形県の概要</a></li>
+                        <li><a href="#history">山形県の歴史</a></li>
+                        <li><a href="#no1">山形県の日本一</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">地域紹介</a>
+                    <ul class="submenu">
+                        <li><a href="murayama.html">村山地域</a></li>
+                        <li><a href="okitama.html">置賜地域</a></li>
+                        <li><a href="syounai.html">庄内地域</a></li>
+                        <li><a href="mogami.html">最上地域</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="map-weather">
+            <h2>山形県のマップと天気</h2>
+            <div id="map-weather-container">
+                <div id="map">
+                    <img src="./images/yamagata-map.png" alt="山形県のマップ">
+                </div>
+                <div id="weather-info">
+                    <!-- 天気情報がここに挿入される --> 
+                </div>
+            </div>
+        </section>
+
+        <section id="yamagata-overview">
+            <h2>山形県の概要</h2>
+            <div class="overview-content">
+                <table class="overview-table">
+                    <tr>
+                        <th>項目</th>
+                        <th>詳細</th>
+                    </tr>
+                    <tr>
+                        <td>面積</td>
+                        <td>9,323.15平方キロメートル (東西約97km、南北約164km) [令和5年4月1日現在]</td>
+                    </tr>
+                    <tr>
+                        <td>人口</td>
+                        <td>1,040,971人 (男504,556人、女536,415人) [令和4年10月1日現在]</td>
+                    </tr>
+                    <tr>
+                        <td>世帯</td>
+                        <td>400,895世帯 [令和4年10月1日現在]</td>
+                    </tr>
+                    <tr>
+                        <td>市町村数</td>
+                        <td>35 (13市19町3村)</td>
+                    </tr>
+                </table>
+            </div>
+        
+            <div class="section">
+                <h3>主な特産品</h3>
+                <p>
+                    さくらんぼ、メロン、ぶどう、すいか、桃、枝豆、りんご、かき、西洋なし(ラフランス)、米、牛肉、酒、ワインなど
+                </p>
+                <div class="images-row">
+                    <div class="image-container">
+                        <img src="./images/さくらんぼ.jpg" alt="さくらんぼ">
+                        <p class="image-caption">さくらんぼ</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="./images/ラフランス.jpg" alt="ラフランス">
+                        <p class="image-caption">ラフランス</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="./images/米.jpg" alt="米">
+                        <p class="image-caption">米</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="./images/ワイン.jpg" alt="ワイン">
+                        <p class="image-caption">ワイン</p>
+                    </div>
+                </div>
+                <h3>主な祭り</h3>
+                <p>
+                    山形花笠まつり(8月上旬：山形市)、新庄まつり(8月下旬：新庄市)、日本一の芋煮会フェスティバル(9月中旬：山形市)、黒川能王祇祭(2月上旬：鶴岡市)、上杉雪灯籠まつり(2月上旬：米沢市)、天童桜まつり(4月下旬：天童市)など
+                </p>
+                <div class="images-row">
+                    <div class="image-container">
+                        <img src="./images/花笠まつり.jpg" alt="山形花笠まつり">
+                        <p class="image-caption">山形花笠まつり</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="./images/新庄まつり.jpg" alt="新庄まつり">
+                        <p class="image-caption">新庄まつり</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="./images/芋煮会フェスティバル.jpg" alt="芋煮会フェスティバル">
+                        <p class="image-caption">日本一の芋煮会フェスティバル</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="./images/天童桜まつり.jpg" alt="天童桜まつり">
+                        <p class="image-caption">天童桜まつり</p>
+                    </div>
+                </div>
+            </div>
+            <!-- モーダルウィンドウ -->
+            <div id="imageModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImage">
+            </div>
+        </section>
+        
+        <section id="history">
+            <h2>山形県の歴史</h2>
+            <div class="history-section">
+                <h3>山形県の略年表</h3>
+                <table class="history-table">
+                    <thead>
+                        <tr>
+                            <th>西暦</th>
+                            <th>元号</th>
+                            <th>できごと</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>712</td>
+                            <td>和銅5</td>
+                            <td>出羽国が成立</td>
+                        </tr>
+                        <tr>
+                            <td>1868</td>
+                            <td>明治元</td>
+                            <td>奥羽越列藩同盟が明治新政府軍に敗北（戊辰戦争）</td>
+                        </tr>
+                        <tr>
+                            <td>1871</td>
+                            <td>明治4</td>
+                            <td>廃藩置県。山形県、置賜県、酒田県を設置</td>
+                        </tr>
+                        <tr>
+                            <td>1876</td>
+                            <td>明治9</td>
+                            <td>山形県、置賜県、酒田県が統合され、現在の山形県になる</td>
+                        </tr>
+                        <tr>
+                            <td>1887</td>
+                            <td>明治20</td>
+                            <td>松ヶ岡製糸場開設</td>
+                        </tr>
+                        <tr>
+                            <td>1892</td>
+                            <td>明治25</td>
+                            <td>米沢絹織物業組合設立</td>
+                        </tr>
+                        <tr>
+                            <td>1894</td>
+                            <td>明治27</td>
+                            <td>山形市南部大火</td>
+                        </tr>
+                        <tr>
+                            <td>1897</td>
+                            <td>明治30</td>
+                            <td>山形歩兵第三十二連隊設置</td>
+                        </tr>
+                        <tr>
+                            <td>1899</td>
+                            <td>明治32</td>
+                            <td>奥羽本線開業。福島－米沢間開通</td>
+                        </tr>
+                        <tr>
+                            <td>1911</td>
+                            <td>明治44</td>
+                            <td>山形北部大火。県庁舎焼失</td>
+                        </tr>
+                        <tr>
+                            <td>1920</td>
+                            <td>大正9</td>
+                            <td>山形高等学校開校</td>
+                        </tr>
+                        <tr>
+                            <td>1925</td>
+                            <td>大正14</td>
+                            <td>のちの昭和天皇が県内を巡行</td>
+                        </tr>
+                        <tr>
+                            <td>1934</td>
+                            <td>昭和9</td>
+                            <td>冷害による大凶作</td>
+                        </tr>
+                        <tr>
+                            <td>1945</td>
+                            <td>昭和20</td>
+                            <td>山形空襲</td>
+                        </tr>
+                        <tr>
+                            <td>1947</td>
+                            <td>昭和22</td>
+                            <td>農地改革</td>
+                        </tr>
+                        <tr>
+                            <td>1949</td>
+                            <td>昭和24</td>
+                            <td>山形大学設置</td>
+                        </tr>
+                        <tr>
+                            <td>1964</td>
+                            <td>昭和39</td>
+                            <td>山形空港が開港</td>
+                        </tr>
+                        <tr>
+                            <td>1988</td>
+                            <td>昭和63</td>
+                            <td>山形鉄道が発足</td>
+                        </tr>
+                        <tr>
+                            <td>1990</td>
+                            <td>平成2</td>
+                            <td>寒河江ダムが完成</td>
+                        </tr>
+                        <tr>
+                            <td>1992</td>
+                            <td>平成4</td>
+                            <td>山形新幹線が開業</td>
+                        </tr>
+                        <tr>
+                            <td>2005</td>
+                            <td>平成17</td>
+                            <td>平成の大合併により現在の13市19町3村になる</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>            
+        </section>
+
+        <section id="no1">
+            <h2>山形県の日本一</h2>
+            <ul class="no1-list">
+                <li>
+                    <span>さくらんぼ収穫量</span>
+                    <p>13,200t (2023年)</p>
+                </li>
+                <li>
+                    <span>ラーメン店舗数</span>
+                    <p>406件 (2021年)</p>
+                </li>
+                <li>
+                    <span>ラーメン外食費用</span>
+                    <p>1世帯あたり 17,593円 (2024年)</p>
+                </li>
+                <li>
+                    <span>一般世帯の平均人員</span>
+                    <p>1世帯あたり 2.61人 (2020年)</p>
+                </li>
+                <li>
+                    <span>三世代同居率</span>
+                    <p>13.9% (2020年)</p>
+                </li>
+                <li>
+                    <span>即身仏の数</span>
+                    <p>8体</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
